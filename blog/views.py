@@ -5,7 +5,7 @@ from .models import Post
 
 def main_page(request):
     posts = list(Post.objects.all())
-    context = {"posts": sample(posts, 4)}
+    context = {"posts": sample(posts, 3)}
     return render(request, "blog/main_page.html", context)
 
 

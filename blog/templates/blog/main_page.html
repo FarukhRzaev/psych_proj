@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="leftcolumn">
+        {% for sign_post in posts %}
+            <div class="card">
+                <a href="{{ sign_post.get_url }}"><h2>{{ sign_post.title }}</h2></a>
+                <h5>{{ sign_post.description }}, {{ sign_post.date }}</h5>
+                <p>{{ sign_post.content }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
