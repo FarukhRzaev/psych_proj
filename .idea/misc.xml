@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="Black">
+    <option name="enabledOnSave" value="true" />
+    <option name="pathToExecutable" value="C:\Users\rasul\AppData\Local\Programs\Python\Python311\Scripts\black.exe" />
+    <option name="sdkUUID" value="c13e6ca2-0f5b-4a5f-9cec-0c912179b79f" />
+  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (psych_proj)" project-jdk-type="Python SDK" />
 </project>
