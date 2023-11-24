@@ -1,8 +1,12 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Hashtag
 from django.db.models import QuerySet
 
-# Register your models here.
+
+@admin.register(Hashtag)
+class HashtagAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ("title",)}
+    list_display = ["title"]
 
 
 @admin.register(Post)
@@ -15,10 +19,11 @@ class PostAdmin(admin.ModelAdmin):
     actions = ["rename_desc"]
     search_fields = ["title__startswith", "description", "date"]
     list_filter = ["date"]
+    filter_horizontal = ["hashtag"]
 
     @admin.display(description="Оценка описания")
     def description_status(self, post):
-        if len(post.content) < 30:
+        if len(post.content) < 2000:
             return "Мало текста, исправить"
         return "Достаточно текста"
 
