@@ -32,10 +32,11 @@ body {
 }
 
 /* Fake image */
-.fakeimg {
+.image {
     background-color: #aaa;
     width: 100%;
-    padding: 20px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 /* Add a card effect for articles */
@@ -43,6 +44,10 @@ body {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
+}
+
+.leftcolumn .card {
+    padding: 20px 5% 20px 5%;
 }
 
 /* Clear floats after the columns */
@@ -104,11 +109,19 @@ body {
     color: white;
 }
 
-.card a {
+a {
     color: black;
     text-decoration: none;
 }
 
 .card a:hover {
     color: #aaaaaa;
+}
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+}
+
+ul {
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
 }

@@ -9,6 +9,9 @@ class Hashtag(models.Model):
     def __str__(self):
         return f"{self.title}"
 
+    def get_url(self):
+        return reverse("hashtag_details", args=[self.slug])
+
 
 class Post(models.Model):
     title = models.CharField(max_length=30, verbose_name="Название")
