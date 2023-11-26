@@ -25,4 +25,5 @@ admin.site.site_header = "Блог Психолога"
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("blog.urls")),
+    path("contacts/", include("contacts.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

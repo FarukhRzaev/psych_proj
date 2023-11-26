@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="leftcolumn">
+        <div class="card">
+            <h2>Пишите мне</h2>
+            <h4>По любым вопросам связаться со мной можно либо по почте psych_proj@gmail.com, либо через форму:</h4>
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-style {% if field.errors %} errors {% endif %}">
+                        {{ field.label_tag }}
+                        {{ field.errors }}
+                        {{ field }}
+                    </div>
+                {% endfor %}
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

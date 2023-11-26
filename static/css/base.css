@@ -9,7 +9,6 @@ body {
     background: #f1f1f1;
 }
 
-/* Header/Blog Title */
 .header {
     padding: 30px;
     font-size: 40px;
@@ -17,21 +16,17 @@ body {
     background: white;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
 .leftcolumn {
     float: left;
     width: 75%;
 }
 
-/* Right column */
 .rightcolumn {
     float: left;
     width: 25%;
     padding-left: 20px;
 }
 
-/* Fake image */
 .image {
     background-color: #aaa;
     width: 100%;
@@ -40,11 +35,6 @@ body {
     border-radius: 5px;
 }
 
-.block .image {
-    width: 50%;
-}
-
-/* Add a card effect for articles */
 .card {
     background-color: white;
     padding: 20px;
@@ -55,20 +45,22 @@ body {
     display: flex;
 }
 
+.block .image {
+    width: 50%;
+}
+
 .block-description {
     padding-left: 30px;
     width: 80%;
 }
 
 
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Footer */
 .footer {
     padding: 20px;
     text-align: center;
@@ -76,7 +68,6 @@ body {
     margin-top: 20px;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
     .leftcolumn, .rightcolumn {
         width: 100%;
@@ -92,7 +83,6 @@ body {
     top: 0;
 }
 
-/* Style the navigation bar links */
 .navbar a {
     float: left;
     display: block;
@@ -130,9 +120,64 @@ a {
 }
 
 li {
-    list-style-type: none; /* Убираем маркеры */
+    list-style-type: none;
 }
 
 ul {
-    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+    padding-left: 0;
+}
+
+button {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 10px solid black;
+}
+
+button:hover, button:active {
+    background-color: #aaaaaa;
+    border-color: #aaaaaa;
+    color: black;
+}
+
+.form-style {
+    margin-bottom: 1rem;
+}
+
+.form-style input {
+    padding: 0.25rem;
+    border-radius: 4px;
+    border: 1px solid #aaaaaa;
+    display: block;
+    width: 315px;
+}
+
+.form-style input:focus {
+    border-color: #aaaaaa;
+    background-color: #f4eeff;
+    outline: none;
+}
+
+.form-style label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.errorlist {
+    font-size: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: darkred
+}
+
+.errors input {
+    border-color: darkred;
+    background-color: #f4eeff;
+}
+
+.errors label{
+ color: darkred;
 }
