@@ -35,8 +35,13 @@ body {
 .image {
     background-color: #aaa;
     width: 100%;
+    height: auto;
     padding: 5px;
     border-radius: 5px;
+}
+
+.block .image {
+    width: 50%;
 }
 
 /* Add a card effect for articles */
@@ -46,9 +51,15 @@ body {
     margin-top: 20px;
 }
 
-.leftcolumn .card {
-    padding: 20px 5% 20px 5%;
+.block {
+    display: flex;
 }
+
+.block-description {
+    padding-left: 30px;
+    width: 80%;
+}
+
 
 /* Clear floats after the columns */
 .row:after {

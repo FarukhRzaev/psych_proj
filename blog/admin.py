@@ -1,10 +1,16 @@
 from django.contrib import admin
-from .models import Post, Hashtag
+from .models import Post, Hashtag, Gallery
 from django.db.models import QuerySet
 
 
 @admin.register(Hashtag)
 class HashtagAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ("title",)}
+    list_display = ["title"]
+
+
+@admin.register(Gallery)
+class GalleryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
     list_display = ["title"]
 

@@ -1,13 +1,21 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView
-from random import sample
-from .models import Post, Hashtag
+from django.views.generic import DetailView
+from django.views.generic.base import TemplateView
+from .models import Post, Hashtag, Gallery
 
 
 def main_page(request):
     posts = list(Post.objects.order_by("-date"))
-    context = {"posts": sample(posts, 3)}
+    context = {
+        "posts": posts[:3],
+        "image": Gallery.objects.get(slug="main-page"),
+    }
     return render(request, "blog/main_page.html", context)
+
+
+def about_me(request):
+    context = {"image": Gallery.objects.get(slug="about-me")}
+    return render(request, "blog/about_me.html", context)
 
 
 def get_info_all_posts(request):
@@ -15,9 +23,10 @@ def get_info_all_posts(request):
     return render(request, "blog/list_post.html", context)
 
 
-def get_info_one_post(request, slug_post):
-    post = get_object_or_404(Post, slug=slug_post)
-    return render(request, "blog/one_post.html", {"sign_post": post})
+class DetailPostView(DetailView):
+    template_name = "blog/one_post.html"
+    model = Post
+    context_object_name = "sign_post"
 
 
 class DetailHashtagView(DetailView):
