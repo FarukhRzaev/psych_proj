@@ -1,6 +1,10 @@
+{% load static %}
+
 <div class="navbar">
-  <a href="{% url 'main_page' %}" class="active">ГЛАВНАЯ</a>
-  <a href="{% url 'all_posts' %}">БЛОГ</a>
-  <a href="{% url 'about_me' %}">ОБО МНЕ</a>
-  <a href="{% url 'contacts' %}" class="right">КОНТАКТЫ</a>
+    <a href="{% url 'main_page' %}" class="naw">ГЛАВНАЯ</a>
+    <a href="{% url 'all_posts' %}" class="naw">БЛОГ</a>
+    <a href="{% url 'about_me' %}" class="naw">ОБО МНЕ</a>
+    <a href="{% url 'contacts' %}" class="right naw">КОНТАКТЫ</a>
 </div>
+
+<script src="{% static 'js/script.js' %}"></script>

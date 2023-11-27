@@ -14,8 +14,9 @@
 {% include 'includes/navbar.html' %}
 
 <div class="row">
-    {% block content %}
-    {% endblock %}
+    <div class="leftcolumn">
+        {% block content %}{% endblock %}
+    </div>
     {% include 'includes/right_column.html' %}
 </div>
 

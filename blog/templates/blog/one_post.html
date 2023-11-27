@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="leftcolumn">
         <div class="card">
             <h2>{{ sign_post.title }}</h2>
             <h5>{{ sign_post.date }}</h5>
@@ -12,7 +11,6 @@
                 {% endfor %}
             </h5>
             <img class="image" src="{{ sign_post.image.url }}" alt="Изображение не прикреплено">
-            <p>{{ sign_post.content }}</p>
+            <p>{% autoescape off %}{{ sign_post.content }}{% endautoescape %}</p>
         </div>
-    </div>
 {% endblock %}

@@ -27,18 +27,17 @@ body {
     padding-left: 20px;
 }
 
-.image {
-    background-color: #aaa;
-    width: 100%;
-    height: auto;
-    padding: 5px;
-    border-radius: 5px;
-}
-
 .card {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
+}
+
+.image {
+    background-color: #aaa;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .block {
@@ -47,13 +46,12 @@ body {
 
 .block .image {
     width: 50%;
+    height: 100%;
 }
 
 .block-description {
     padding-left: 30px;
-    width: 80%;
 }
-
 
 .row:after {
     content: "";
@@ -93,18 +91,15 @@ body {
 }
 
 
-/* Right-aligned link */
 .navbar a.right {
     float: right;
 }
 
-/* Change color on hover */
 .navbar a:hover {
     background-color: #ddd;
     color: black;
 }
 
-/* Active/current link */
 .navbar a.active {
     background-color: #666;
     color: white;
@@ -115,7 +110,7 @@ a {
     text-decoration: none;
 }
 
-.card a:hover {
+a:hover {
     color: #aaaaaa;
 }
 
@@ -178,6 +173,6 @@ button:hover, button:active {
     background-color: #f4eeff;
 }
 
-.errors label{
- color: darkred;
+.errors label {
+    color: darkred;
 }

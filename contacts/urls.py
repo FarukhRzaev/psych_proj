@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path("", views.ContactView.as_view(), name="contacts"),
-    path("success", views.SuccessView.as_view()),
+    path("success/", views.SuccessView.as_view()),
 ]
